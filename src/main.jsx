@@ -7,14 +7,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./layouts/rootLayout/RootLayout";
 import DashboardLayout from "./layouts/dashboardLayout/DashboardLayout";
-import { ClerkProvider } from "@clerk/clerk-react";
-
-// Import your publishable key
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
-if (!PUBLISHABLE_KEY) {
-  throw new Error("Missing Publishable Key");
-}
+import SignInPage from "./routes/signInPage/SignInPage";
+import SignUnPage from "./routes/signUnPage/SignUnPage";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +17,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Homepage />,
+      },
+      {
+        path: "/sign-in/*",
+        element: <SignInPage />,
+      },
+      {
+        path: "/sign-up/*",
+        element: <SignUnPage />,
       },
       {
         element: <DashboardLayout />,
