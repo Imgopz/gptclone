@@ -1,3 +1,3 @@
-# gptclone# Lama Dev AI Chat Bot App Starter Setup
+# gptclone
 
-This template provides a minimal setup to get React 19 working in Vite with HMR and some ESLint rules.
+# Lama Dev AI Chat Bot App
