@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const chatSchema = new mongoose.Schema(
   {
@@ -10,7 +10,7 @@ const chatSchema = new mongoose.Schema(
       {
         role: {
           type: String,
-          enum: [user | model],
+          enum: ["user" | "model"],
           required: true,
         },
         parts: [
