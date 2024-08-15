@@ -44,6 +44,8 @@ app.get("/api/upload", (req, res) => {
 app.post("/api/chats", async (req, res) => {
   const { userId, text } = req.body;
 
+  console.log(userId, text);
+
   try {
     // CREATE A NEW CHAT
     const newChat = new Chat({
